@@ -20,12 +20,25 @@ class PicturesController < ApplicationController
     else
       # otherwise render new.html.erb
       render :new
-    end#if/else 
+    end#if/else
   end#create
-
 
   def picture_params
     { title: params[:picture][:title], artist: params[:picture][:artist], url: params[:picture][:url] }
-  end
+  end#picture_params
+
+  def edit
+    @picture = Picture.find(params[:id])
+  end#edit
+
+  def update
+    @picture = Picture.find(params[:id])
+    # use the same picture_params method that we used in create
+    if @picture.update_attributes(picture_params)
+      redirect_to "/pictures/#{@picture.id}"
+    else
+      render :edit
+    end#if/else
+  end#update
 
 end#PictureController class
