@@ -22,12 +22,23 @@ Unsure yet if I should be replacing the above code with this.
   <% end %>
 </ul>
 
-+<h1>From last month</h1>
- +<ul>
- +  <% @older_than_one_month.each do |picture| %>
- +    <li><%= picture.title %></li>
- +  <% end %>
- +</ul>
+<h1>A month old, or older:</h1>
+<ul>
+  <% @older_than_one_month.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
+<h1>Find pictures by year:</h1>
+<ul>
+  <% @pictures_created_in_year(year).each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
+
+
+
 
 
 
