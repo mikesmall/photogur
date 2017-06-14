@@ -2,9 +2,19 @@
 <%= link_to("New Picture", "/pictures/new") %>
 
 <% @pictures.each do |picture| %>
+
   <p><%= picture.title %>, <%= picture.artist %></p>
   <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
+
+  <p>Comments: <%= picture.comments.count %> </p>
+  
 <% end %>
+
+
+
+
+
+
 
 <!--
 Previous code:
