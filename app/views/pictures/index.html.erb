@@ -7,8 +7,20 @@
   <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
 
   <p>Comments: <%= picture.comments.count %> </p>
-  
+
 <% end %>
+
+<!--
+Code pasted for 'Photogur ActiveRecord Queries' assignment.
+Unsure yet if I should be replacing the above code with this.
+-->
+
+<h1>Most recent pictures</h1>
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
 
 
 

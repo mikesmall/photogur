@@ -2,11 +2,12 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
+    @most_recent_pictures = Picture.most_recent_five
   end#index
 
   def show
     @picture = Picture.find(params[:id])
-    @comment = @picture.comments 
+    @comment = @picture.comments
   end#show
 
   def new
