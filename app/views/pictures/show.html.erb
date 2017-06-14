@@ -15,9 +15,16 @@
       <p>On <%= comment.created_at %>, <%= comment.name %> said:</p>
       <p><% comment.message %></p>
     </li>
-  <% end %>  
+  <% end %>
 </ol>
 
+<h2>Tags:</h2>
+<ul>
+  <% @picture.tags.each do |tag| %>
+    <li>
+      <p> <% tag.name %> </p>
+    </li>
+</ul>
 
 
 
