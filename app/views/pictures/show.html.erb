@@ -4,9 +4,13 @@
 
 <%= link_to("Back to Pictures", "/pictures") %> | <%= link_to("Edit", "/pictures/#{@picture.id}/edit") %> | <%= link_to("Delete", "/pictures/#{@picture.id}", method: :delete, data: {confirm: "Are you sure you want to delete this picture?"})  %>
 
+<!-- Display PICTURE: -->
+
 <p><%= @picture.title %></p>
 <p><%= @picture.artist %></p>
 <%= image_tag(@picture.url) %>
+
+<!-- Display COMMENTS: -->
 
 <h2>Comments:</h2>
 <ol>
@@ -17,6 +21,8 @@
     </li>
   <% end %>
 </ol>
+
+<!-- Display TAGS: -->
 
 <h2>Tags:</h2>
 <ul>
