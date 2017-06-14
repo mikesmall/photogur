@@ -27,8 +27,10 @@ class Picture < ApplicationRecord
 
   # if needed: a month is 2629746000 milliseconds
 
-  def self.pictures_created_in_year
-    Picture.where("created_at = ?", year)
+  def self.pictures_created_in_year(year)
+    start_year = DateTime.new(year)
+    end_year   = DateTime.new(year).end_of_year
+    Picture.where("created_at >= ? <= ?", start_year, end_year)
   end
 
 end#Picture

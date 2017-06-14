@@ -4,6 +4,6 @@ class Comment < ApplicationRecord
   belongs_to :picture
 
   # 'Through' association:
-  has_many: :tags, through: :pictures 
+  # has_many: :tags, through: :pictures 
 
 end

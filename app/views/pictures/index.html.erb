@@ -29,12 +29,17 @@ Unsure yet if I should be replacing the above code with this.
   <% end %>
 </ul>
 
-<h1>Find pictures by year:</h1>
+<h1>Images arranged by year:</h1>
+
+<h2>2017</h2>
+<%= year = 2017 %>
 <ul>
-  <% @pictures_created_in_year(year).each do |picture| %>
+  <% @pictures_created_in_year.each do |picture| %>
     <li><%= picture.title %></li>
   <% end %>
 </ul>
+
+
 
 
 
