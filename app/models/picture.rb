@@ -1,5 +1,11 @@
 class Picture < ApplicationRecord
 
+  validates :artist, :url, presence: true
+
+  validates :title, length: { minimum: 3, maximum: 20 }
+
+  validates :url, uniqueness: true
+
   # there's a picture_id foreign key referring to you in the comments table
   has_many :comments
 

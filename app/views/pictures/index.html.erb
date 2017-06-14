@@ -3,13 +3,13 @@
 
 <% @pictures.each do |picture| %>
 
-  <p><%= picture.title %>, <%= picture.artist %></p>
+  <p><%= picture.title %>, by <%= picture.artist %></p>
   <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
 
   <p>Comments: <%= picture.comments.count %> </p>
 
 <% end %>
-
+  
 <!--
 Code pasted for 'Photogur ActiveRecord Queries' assignment.
 Unsure yet if I should be replacing the above code with this.
