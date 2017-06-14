@@ -21,4 +21,8 @@ class Picture < ApplicationRecord
     Picture.where("created_at < ?", time)
   end
 
+  def self.older_than_one_month(time)
+    Picture.where("created_at <= ?", 1.month.ago)
+  end
+
 end#Picture
