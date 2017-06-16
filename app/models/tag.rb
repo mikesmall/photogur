@@ -4,6 +4,6 @@ class Tag < ApplicationRecord
 
   # 'Through' association:
 
-  has_many: :comments, through: :pictures
-  
+  has_many :comments, through: :pictures
+
 end#Tag
