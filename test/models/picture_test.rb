@@ -17,7 +17,7 @@ class PictureTest < ActiveSupport::TestCase
     picture = Picture.create(
       title:  'Pants Patching Customer Lineup',
       artist: 'Butch Hunkington',
-      url:    'hhttp://img.wennermedia.com/featured-promo-724/rs-241794-GettyImages-86118756.jpg'
+      url:    'http://img.wennermedia.com/featured-promo-724/rs-241794-GettyImages-86118756.jpg'
     )
     assert picture.invalid?
   end
