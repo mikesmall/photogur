@@ -1,0 +1,25 @@
+<!--
+
+Write a form for a new user the same way you would for any other model/form, but instead of a password_digest field, you should have a password field and a password_confirmation field.
+
+-->
+<%= form_for @user do |f| %>
+
+  <div class='field'>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <%= f.submit 'Sign Up' %>
+
+<% end %>

@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   delete 'pictures/:id' => 'pictures#destroy'
 
+  get 'pictures/new_user' => 'pictures#new_user'
+
 end
